@@ -1,0 +1,162 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: grid;
+        height: 100vh;
+        grid-template-rows:  1fr 0fr 9fr 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer"
+        ;
+    }
+
+    header{
+        grid-area: header;
+        background-color: rgb(80, 80, 220);
+        text-align: center;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        display: block;
+    }
+
+    nav{
+        grid-area: nav;
+        background-color:  rgb(80, 80, 220);
+        text-align: center;
+        color: white;
+        display: none;
+    }
+
+    main {
+        grid-area: main;
+        background-color: white;
+        text-align: center;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: rgb(45, 45, 220);
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li{
+        list-style: none;
+        padding-bottom: 10px;
+    }
+
+    nav a{
+        text-decoration: none;
+        color: white
+    }
+
+    .tarjeta{
+        border-radius: 5px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        padding: 15px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .filtro{
+        background-color: gainsboro;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn{
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 8px 30px 8px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        appearance: none;
+    }
+
+    .grid-main{
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    
+    Body img{
+        height: 200px;
+    }
+
+    .boton{
+        background-color: rgb(0, 92, 185);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 20px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    @media (min-width: 576px){
+        body {
+            grid-template-areas: 
+            "header main"
+            "nav main"
+            "footer main"
+            ;
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: 1fr 10fr 3fr;   
+        }
+
+        .grid-main{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            margin-top: 20px;
+            margin-right: 10px;
+            margin-left: 0;
+            gap: 10px;
+    }
+
+    nav{
+        display: block;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    }
