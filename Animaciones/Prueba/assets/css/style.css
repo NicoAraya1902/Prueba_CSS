@@ -1,0 +1,208 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows:  1fr 0fr 9fr 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer"
+        ;
+    }
+
+    header{
+        grid-area: header;
+        background-color: rgb(80, 80, 220);
+        text-align: center;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    P{
+        font-size: 30px;
+    }
+    .menu-toggle {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        display: block;
+    }
+
+    nav{
+        grid-area: nav;
+        background-color:  rgb(80, 80, 220);
+        text-align: center;
+        color: white;
+        display: none;
+    }
+
+    main {
+        grid-area: main;
+        background-color: white;
+        text-align: center;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: rgb(45, 45, 220);
+        color: white;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li{
+        list-style: none;
+        padding-bottom: 10px;
+    }
+
+    nav a{
+        text-decoration: none;
+        color: white
+    }
+
+    .tarjeta{
+        border-radius: 5px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        padding: 15px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .tarjeta img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-width: 100%;
+    }
+
+    .filtro{
+        background-color: gainsboro;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn{
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 8px 30px 8px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        appearance: none;
+    }
+
+    .grid-main{
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .fotos{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: auto;
+        justify-content: center;
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .fotos img{
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: cover;
+        transition: filter 0.3s ease;
+    }
+
+    .fotos img:hover {
+        filter: grayscale(100%);
+    }
+
+    
+    Body img{
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+
+    .boton{
+        background-color: rgb(0, 92, 185);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 20px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+@media (min-width: 576px){
+    body {
+        grid-template-areas: 
+        "header main main"
+        "nav main main"
+        "nav main main"
+        "nav main main"
+        "footer footer footer"
+        ;
+        grid-template-columns: 150px 1fr;
+    }
+    
+    .fotos{
+        flex-direction: row; 
+    }
+    
+    .grid-main{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+    
+    nav{
+        display: block;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+
+    p{
+        font-size: 20px;
+    }
+}
